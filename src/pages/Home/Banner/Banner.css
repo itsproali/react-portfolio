@@ -1,0 +1,84 @@
+/* .banner {
+    background-image: url(https://image.shutterstock.com/image-vector/network-abstract-connection-isolated-on-600w-1368468908.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+} */
+
+.resume-btn:active,
+.resume-btn:hover,
+.resume-btn:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+.resume-btn::before,
+.resume-btn::after {
+    position: absolute;
+    content: "";
+}
+
+.resume-btn {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    min-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px 0 lightgray;
+}
+
+.resume-btn:active {
+    transform: scale(0.9);
+    transition: .4s ease-in-out;
+}
+
+.resume-btn span {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 15px;
+    transition: 0.3s;
+}
+
+
+
+.resume-btn::before {
+    background-color: #F75023;
+    transition: 0.3s ease-out;
+}
+
+.resume-btn span {
+    color: #F75023;
+    border: 2px solid #F75023;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.resume-btn span:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.2s 0.1s;
+}
+
+/* 1.hover-filled-slide-down */
+.resume-btn::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.resume-btn:hover::before {
+    border-radius: 10px;
+    height: 100%;
+}
