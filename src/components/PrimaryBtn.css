@@ -40,7 +40,7 @@
 
 }
 
-.primary-button:hover {
+.primary-button:hover, .active-btn {
     color: #FF651C;
     background-color: transparent;
 }

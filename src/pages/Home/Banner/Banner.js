@@ -9,7 +9,7 @@ const Banner = () => {
       <motion.div
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.5 }}
       >
         <h2 className="text-gray-400 text-xl font-medium">Hello, I'm</h2>
         <h1 className="text-4xl font-semibold mb-0">Mohammad Ali</h1>
