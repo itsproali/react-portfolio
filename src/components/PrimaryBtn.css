@@ -1,0 +1,62 @@
+.primary-button {
+    border: 2px solid #FF651C;
+    background-color: #FF651C;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s;
+    border-radius: 7px;
+}
+
+.primary-button::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #FF651C;
+    transition: all .5s;
+    z-index: -1;
+
+}
+
+.primary-button::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #FF651C;
+    transition: all .5s;
+    z-index: -1;
+
+}
+
+.primary-button:hover {
+    color: #FF651C;
+    background-color: transparent;
+}
+
+.primary-button:active {
+    transform: scale(0.93);
+}
+
+.primary-button:hover::before {
+    z-index: 1;
+    transform: rotateX(90deg);
+
+}
+
+.primary-button:hover::after {
+    z-index: 1;
+    transform: rotateY(90deg);
+
+}

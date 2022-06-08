@@ -1,22 +1,17 @@
 import React from "react";
-import "../../shared/Shared.css";
 import TypeAnimation from "react-type-animation";
 import { motion } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import "./Banner.css";
+import "../../shared/Shared.css";
 
 const Banner = () => {
   return (
-    <div className="parent min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between">
+    <div className="parent min-h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-between">
       <motion.div
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       >
-        <h2 className="text-accent text-xl font-medium">Hello, I'm</h2>
+        <h2 className="text-gray-400 text-xl font-medium">Hello, I'm</h2>
         <h1 className="text-4xl font-semibold mb-0">Mohammad Ali</h1>
         <div className="my-4">
           <TypeAnimation
@@ -38,48 +33,21 @@ const Banner = () => {
           I am Jr. Front-end Developer. I am very passionate to my work and
           dedicated to explore New Tools And Technologies.
         </p>
-        <div className="mb-4 flex items-center">
-          <a
-            href="https://www.linkedin.com/in/itsproali"
-            target="blank"
-            className="text-3xl text-blue-400 shadow-lg mx-1"
-          >
-            <FaLinkedin></FaLinkedin>
-          </a>
-          <a
-            href="https://www.github.com/itsproali"
-            target="blank"
-            className="text-3xl text-black shadow-lg mx-1"
-          >
-            <FaGithubSquare></FaGithubSquare>
-          </a>
-          <a
-            href="https://www.facebook.com/itsproali"
-            target="blank"
-            className="text-3xl text-blue-500 shadow-lg mx-1"
-          >
-            <FaFacebookSquare></FaFacebookSquare>
-          </a>
-          <a
-            href="https://www.instagram.com/itsproali"
-            target="blank"
-            className="text-3xl text-pink-600 shadow-lg mx-1"
-          >
-            <FaInstagramSquare></FaInstagramSquare>
-          </a>
-        </div>
-        <button className="resume-btn">
-          <span>My Resume</span>
-        </button>
+
+        <a
+          href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
+          target="blank"
+        >
+          <button className="primary-button">My Resume</button>
+        </a>
       </motion.div>
       <motion.div
         className="w-full md:w-1/2"
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       >
         <img
-          //   src="https://i.ibb.co/xXYCYSy/mdali-yellow-bg-profile.png"
           src="https://cdn.dribbble.com/users/330915/screenshots/3587000/10_coding_dribbble.gif"
           alt="Mohammad Ali"
         />
