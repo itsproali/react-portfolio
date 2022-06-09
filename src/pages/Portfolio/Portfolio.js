@@ -52,16 +52,24 @@ const Portfolio = () => {
         </PrimaryBtn>
       </div>
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 1, scale: 0 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+          },
+        }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {items.map((item) => (
           <motion.div
-            initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.4 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
             key={item.id}
             className="rounded-lg shadow-lg p-4 flex flex-col justify-between hover:shadow-primary duration-500"
             style={{ backgroundColor: "#313131" }}

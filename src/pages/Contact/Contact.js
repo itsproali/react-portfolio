@@ -12,10 +12,38 @@ import {
   FaInstagramSquare,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const handleSend = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        "itsproali_portfolio",
+        "itsproali_portfolio",
+        e.target,
+        "H-ispiDvwdbG_76iq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your Message has been sent",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
   return (
     <div className="parent py-16">
