@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
+import { GiCrossMark } from "react-icons/gi";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
@@ -60,12 +61,19 @@ export default function Navbar() {
               className="bla bla bla"
             >
               <ul className="">
+                <li className="mt-6 ml-4">
+                  <GiCrossMark
+                    className="cursor-pointer hover:text-primary duration-300"
+                    onClick={() => setIsOpen(!isOpen)}
+                  ></GiCrossMark>
+                </li>
                 {Object.entries(navLinks).map((link) => (
                   <li key={link[0]}>
                     <NavLink
                       to={link[1]}
                       className="btn btn-ghost rounded-none w-full"
                       style={activeLink}
+                      onClick={() => setIsOpen(!isOpen)}
                     >
                       {link[0]}
                     </NavLink>

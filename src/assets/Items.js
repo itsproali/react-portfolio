@@ -28,37 +28,7 @@ const Items = [
     category: "e-commerce",
     liveLink: "https://caring-doctors-portal.web.app/",
     codeLink: "https://github.com/itsproali/allied-parts-client",
-  },
-  {
-    id: 4,
-    img: "",
-    title: "Allied Parts",
-    description:
-      "A parts Manufacturer Website with admin controls, payment gateway, secured all necessary pages etc.",
-    category: "business",
-    liveLink: "https://allied-parts-manufacturing.web.app/",
-    codeLink: "https://github.com/itsproali/allied-parts-client",
-  },
-  {
-    id: 5,
-    img: "",
-    title: "Allied Parts",
-    description:
-      "A parts Manufacturer Website with admin controls, payment gateway, secured all necessary pages etc.",
-    category: "business",
-    liveLink: "https://allied-parts-manufacturing.web.app/",
-    codeLink: "https://github.com/itsproali/allied-parts-client",
-  },
-  {
-    id: 6,
-    img: "",
-    title: "Allied Parts",
-    description:
-      "A parts Manufacturer Website with admin controls, payment gateway, secured all necessary pages etc.",
-    category: "business",
-    liveLink: "https://allied-parts-manufacturing.web.app/",
-    codeLink: "https://github.com/itsproali/allied-parts-client",
-  },
+  }
 ];
 
 export default Items;

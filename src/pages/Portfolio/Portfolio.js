@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Items from "../../assets/Items";
 import PrimaryBtn from "../../components/PrimaryBtn";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Portfolio = () => {
   const [items, setItems] = useState(Items);
   const [activeBtn, setActiveBtn] = useState("all");
+  const [ref, inView] = useInView();
+  const animation = useAnimation();
+  useEffect(() => {
+    console.log(inView);
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+  }, [inView, animation]);
+
   const filterItem = (category) => {
     const filtered = Items.filter((item) => item.category === category);
     setItems(filtered);
-    // console.log(category, filtered);
   };
 
   return (
@@ -52,23 +67,19 @@ const Portfolio = () => {
         </PrimaryBtn>
       </div>
       <motion.div
-        initial={{ opacity: 1, scale: 0 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.2,
-          },
-        }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={animation}
+        ref={ref}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {items.map((item) => (
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ x: 200, opacity: 0, scale: 0 }}
             animate={{
-              y: 0,
+              x: 0,
+              scale: 1,
               opacity: 1,
+              transition: { duration: 0.3 },
             }}
             key={item.id}
             className="rounded-lg shadow-lg p-4 flex flex-col justify-between hover:shadow-primary duration-500"

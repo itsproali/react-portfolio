@@ -23,10 +23,88 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Mohammad Ali | Front-end Developer</title>
+  <style>*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color:#F5F5F5;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+  }
+  
+  .loader{
+    width: 100px;
+    height:100px;
+    position:relative;
+  }
+  
+  .loader div{
+    position:absolute;
+    width: 35%;
+    height: 35%;
+    border-radius:5px;
+    animation: load 2s infinite ease-in-out;
+  }
+  
+  .loader div:nth-of-type(1){
+    background-color:#B22727;
+  }
+  
+  .loader div:nth-of-type(2){
+    background-color:#EE5007;
+    animation-delay:0.5s;
+  }
+  
+  .loader div:nth-of-type(3){
+    background-color:#F8CB2E;
+    animation-delay:1s;
+  }
+  .loader div:nth-of-type(4){
+    background-color:#006E7F;
+    animation-delay:1.5s;
+  }
+  
+  @keyframes load {
+    0% {
+      transform: translate(0%);
+      border-radius: 50%;
+    }
+  
+    25% {
+      transform: translate(200%) rotate(45deg);
+      border-radius: 0%;
+    }
+  
+    50% {
+      transform: translate(200%, 200%);
+      border-radius: 50%;
+    }
+  
+    75% {
+      transform: translate(0, 200%) rotate(-45deg);
+      border-radius: 0%;
+    }
+    100% {
+      transform: translate(0%);
+      border-radius: 50%;
+    }
+  }
+  </style>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
   <div id="root"></div>
   <!--
       This HTML file is a template.

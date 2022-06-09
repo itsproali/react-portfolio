@@ -12,9 +12,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.loader {
+  display: none;
+}
+
 body {
   background-color: #212121;
   color: white;
+  height: auto;
+  width: auto;
   min-height: 100vh;
   position: relative;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -45,10 +45,10 @@ const Banner = () => {
         className="w-full md:w-1/2"
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.5 }}
       >
         <img
-          src="https://cdn.dribbble.com/users/330915/screenshots/3587000/10_coding_dribbble.gif"
+          src="https://i.ibb.co/rf89pDm/coding.png"
           alt="Mohammad Ali"
         />
       </motion.div>
