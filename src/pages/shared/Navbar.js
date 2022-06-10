@@ -14,8 +14,9 @@ export default function Navbar() {
   const navLinks = {
     Home: "/",
     About: "/about",
-    Portfolio: "/portfolio",
+    Project: "/project",
     Contact: "/contact",
+    Blog: "/blog",
   };
   const activeLink = ({ isActive }) => {
     return {
@@ -25,7 +26,10 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-accent w-full sticky top-0 left-0 z-50 shadow-xl">
+    <div
+      className="w-full sticky top-0 left-0 z-50 shadow-xl"
+      style={{ backgroundColor: "#313131" }}
+    >
       <div className="flex items-center justify-between  px-3 md:px-24 py-3">
         <div>
           <Link to="/">
@@ -33,7 +37,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div>
-          <ul className="md:flex items-center hidden">
+          <ul className="lg:flex items-center hidden">
             {Object.entries(navLinks).map((link) => (
               <li className="mx-4" key={link[0]}>
                 <NavLink to={link[1]} style={activeLink}>
@@ -43,13 +47,14 @@ export default function Navbar() {
             ))}
 
             <a
+              className="inline-block ml-4"
               href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
               target="blank"
             >
               <button className="primary-button">My Resume</button>
             </a>
           </ul>
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <button onClick={toggleDrawer} className="btn btn-ghost text-white">
               <RiMenu3Fill></RiMenu3Fill>
             </button>
