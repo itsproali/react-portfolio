@@ -10,7 +10,6 @@ const Portfolio = () => {
   const [ref, inView] = useInView();
   const animation = useAnimation();
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       animation.start({
         opacity: 1,
@@ -28,7 +27,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="parent py-16">
+    <div className="parent py-20">
       <div className="">
         <h1 className="text-4xl font-semibold drop-shadow-md text-center">
           Featured <span className="text-primary">Projects</span>

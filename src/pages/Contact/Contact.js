@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contact.css";
 import "../../components/PrimaryBtn.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import {
   FaUserAlt,
   FaPhoneAlt,
@@ -15,9 +15,26 @@ import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const navigate = useNavigate();
+  const [ref, inView] = useInView({ threshold: 0.3 });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        transition: {
+          duration: 1,
+          type: "spring",
+          bounce: 0.5,
+        },
+      });
+    }
+  }, [inView, animation]);
+
   const handleSend = (e) => {
     e.preventDefault();
     emailjs
@@ -46,18 +63,13 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div className="parent py-16">
+    <div className="parent py-20" ref={ref}>
       <h3 className="text-gray-400 text-center">Feel Free To Contact Me</h3>
       <h1 className="text-4xl font-semibold drop-shadow-md text-center">
         Get In <span className="text-primary">Touch</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        <motion.div
-          className=""
-          initial={{ y: "-100vh" }}
-          animate={{ y: 0 }}
-          transition={{ duration: 1, type: "spring" }}
-        >
+        <motion.div className="" initial={{ y: -100 }} animate={animation}>
           <h2 className="text-2xl font-medium">Contact Me</h2>
           <form onSubmit={handleSend}>
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
@@ -104,12 +116,7 @@ const Contact = () => {
             </button>
           </form>
         </motion.div>
-        <motion.div
-          className=""
-          initial={{ y: "100vh" }}
-          animate={{ y: 0 }}
-          transition={{ duration: 1, type: "spring" }}
-        >
+        <motion.div className="" initial={{ y: 100 }} animate={animation}>
           <h2 className="text-2xl font-medium">Contact Info</h2>
           <div className="flex items-center my-6">
             <FaUserAlt className="text-2xl mr-8 hover:text-primary cursor-pointer duration-300"></FaUserAlt>
