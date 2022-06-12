@@ -1,0 +1,48 @@
+.item-container {
+    height: 400px;
+}
+
+.item {
+    background: transparent;
+    position: relative;
+}
+
+.item img {
+    opacity: 1;
+    transition: opacity 0.35s;
+}
+
+
+.item .overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 2px solid #FF651C;
+    border-radius: 5px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+}
+
+.item:hover .overlay {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.item:hover .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #313131;
+}
+
+.item:hover img {
+    opacity: 0.8;
+}

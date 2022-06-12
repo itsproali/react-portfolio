@@ -1,6 +1,7 @@
 const Items = [
   {
     id: 1,
+    mainImage: "https://i.ibb.co/gd6qmZf/allied-main.png",
     img: [
       "https://i.ibb.co/cNCSRSH/allied-parts.png",
       "https://i.ibb.co/SN9yQvy/allied-2.png",
@@ -35,6 +36,7 @@ const Items = [
   },
   {
     id: 2,
+    mainImage: "https://i.ibb.co/bsFpVR1/super-bike-main.png",
     img: [
       "https://i.ibb.co/Jtdzytx/bike-1.png",
       "https://i.ibb.co/PF5d60s/bike-2.png",
@@ -71,6 +73,7 @@ const Items = [
   },
   {
     id: 3,
+    mainImage: "https://i.ibb.co/qJLy9Xz/caring-doctors-main.png",
     img: ["https://i.ibb.co/FDVj4b9/Screenshot-10.png"],
     features: [""],
     technologies: ["React"],
