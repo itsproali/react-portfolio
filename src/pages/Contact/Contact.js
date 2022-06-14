@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Contact.css";
 import "../../components/PrimaryBtn.css";
 import { motion, useAnimation } from "framer-motion";
@@ -19,6 +19,7 @@ import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const navigate = useNavigate();
+  const form = useRef();
   const [ref, inView] = useInView({ threshold: 0.3 });
   const animation = useAnimation();
   const headingAnimation = useAnimation();
@@ -43,7 +44,7 @@ const Contact = () => {
       .sendForm(
         "itsproali_portfolio",
         "itsproali_portfolio",
-        e.target,
+        form.current,
         "H-ispiDvwdbG_76iq"
       )
       .then(
@@ -80,7 +81,7 @@ const Contact = () => {
           animate={animation}
         >
           <h2 className="text-2xl font-medium">Contact Me</h2>
-          <form onSubmit={handleSend}>
+          <form ref={form} onSubmit={handleSend}>
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
               <input
                 className="input-field"

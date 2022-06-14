@@ -24,10 +24,11 @@
     -->
   <title>Mohammad Ali | Front-end Developer</title>
   <style>
-*{
-margin: 0;
-padding: 0;
-}
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: #212121;
       display: flex;
@@ -41,6 +42,7 @@ padding: 0;
       width: 100px;
       height: 100px;
       position: relative;
+      transition: ease-in-out 0.3s;
     }
 
     .loader div {
@@ -51,21 +53,21 @@ padding: 0;
       animation: load 2s infinite ease-in-out;
     }
 
-    .loader div:nth-of-type(1) {
+    .loader .div-1 {
       background-color: #B22727;
     }
 
-    .loader div:nth-of-type(2) {
+    .loader .div-2 {
       background-color: #EE5007;
       animation-delay: 0.5s;
     }
 
-    .loader div:nth-of-type(3) {
+    .loader .div-3 {
       background-color: #F8CB2E;
       animation-delay: 1s;
     }
 
-    .loader div:nth-of-type(4) {
+    .loader .div-4 {
       background-color: #006E7F;
       animation-delay: 1.5s;
     }
@@ -101,13 +103,15 @@ padding: 0;
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div class="loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  <div id="root">
+    <div class="loader">
+      <div class="div-1"></div>
+      <div class="div-2"></div>
+      <div class="div-3"></div>
+      <div class="div-4"></div>
+    </div>
+
   </div>
-  <div id="root"></div>
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

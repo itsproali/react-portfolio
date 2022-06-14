@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Items from "../../assets/Items";
-import PrimaryBtn from "../../components/PrimaryBtn";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link, useLocation } from "react-router-dom";
@@ -44,33 +43,39 @@ const Project = () => {
           </h3>
         </div>
         <div className="my-6 flex items-center justify-center flex-wrap">
-          <PrimaryBtn
-            className={`mx-3 ${activeBtn === "all" && "active-btn"}`}
+          <button
+            className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${
+              activeBtn === "all" && "active-btn"
+            }`}
             onClick={() => {
               setActiveBtn("all");
               setItems(Items);
             }}
           >
             All
-          </PrimaryBtn>
-          <PrimaryBtn
-            className={`mx-3 ${activeBtn === "e-commerce" && "active-btn"}`}
+          </button>
+          <button
+            className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${
+              activeBtn === "e-commerce" && "active-btn"
+            }`}
             onClick={() => {
               setActiveBtn("e-commerce");
               filterItem("e-commerce");
             }}
           >
             E-Commerce
-          </PrimaryBtn>
-          <PrimaryBtn
-            className={`mx-3 ${activeBtn === "business" && "active-btn"}`}
+          </button>
+          <button
+            className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${
+              activeBtn === "business" && "active-btn"
+            }`}
             onClick={() => {
               setActiveBtn("business");
               filterItem("business");
             }}
           >
             Business
-          </PrimaryBtn>
+          </button>
         </div>
       </motion.div>
       <motion.div

@@ -13,12 +13,12 @@ html {
 }
 
 .loader {
-  display: none;
+  display: none
 }
 
 body {
   display: block;
-  background-color: #212121;
+  /* background-color: #212121; */
   color: white;
   height: auto;
   width: auto;
