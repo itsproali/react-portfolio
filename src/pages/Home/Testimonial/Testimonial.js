@@ -70,7 +70,7 @@ const Testimonial = () => {
           {Reviews.map((review) => (
             <div key={review.id} className="mt-6">
               <div
-                className="mx-4 rounded-lg shadow-xl single-blog cursor-pointer border-2 border-primary pt-6 flex flex-col justify-between"
+                className="mx-4 rounded-lg shadow-xl single-blog cursor-pointer border-2 border-primary pt-6 flex flex-col justify-between h-[300px]"
                 style={{ backgroundColor: "#313131" }}
               >
                 <div className="px-6">

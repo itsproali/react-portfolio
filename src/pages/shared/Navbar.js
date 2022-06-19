@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="w-full sticky top-0 left-0 z-50 shadow-xl"
+      className="w-full sticky top-0 left-0 z-50 shadow-lg"
       style={{ backgroundColor: "#313131" }}
     >
       <div className="flex items-center justify-between  px-3 md:px-24 py-3">

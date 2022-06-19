@@ -5,7 +5,7 @@ const Reviews = [
     city: "Dhaka, Bangladesh",
     img: "https://i.ibb.co/MGXNxNM/Mohammad-Ali-Profile-Circle.png",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores provident officiis ipsum harum labore illo quas nemo, laboriosam qui commodi?",
+      "I am very impressed to work with him. He is a very good and skilled person. I want to work with him again.",
     rating: 5.0,
   },
   {
@@ -14,7 +14,7 @@ const Reviews = [
     city: "Dhaka, Bangladesh",
     img: "https://i.ibb.co/QphMstM/siam.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores provident officiis ipsum harum labore illo quas nemo, laboriosam qui commodi?",
+      "He is my partner. We work together. When I fall into an error or any other problem he support me always.",
     rating: 5.0,
   },
   {
@@ -23,7 +23,7 @@ const Reviews = [
     city: "Dhaka, Bangladesh",
     img: "https://i.ibb.co/YRJ02j3/sakib.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores provident officiis ipsum harum labore illo quas nemo, laboriosam qui commodi?",
+      "I was give him to make an webpage. He made me an awesome website. I recommend himself and wanna work with him again.",
     rating: 5.0,
   },
   {
@@ -32,7 +32,7 @@ const Reviews = [
     city: "Dhaka, Bangladesh",
     img: "https://i.ibb.co/YWLFHDj/nasim.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores provident officiis ipsum harum labore illo quas nemo, laboriosam qui commodi?",
+      "I was finding someone to help me to build my Grocery website for my store. He made me an E-commerce Store. I am satisfied with his work.",
     rating: 5.0,
   },
 ];

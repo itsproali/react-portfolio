@@ -20,6 +20,8 @@
     right: 15px;
     bottom: 15px;
     left: 15px;
+    padding: 10px;
+    text-align: center;
     border: 2px solid #FF651C;
     border-radius: 5px;
     content: '';
