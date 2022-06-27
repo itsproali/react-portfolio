@@ -4,6 +4,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { GiCrossMark } from "react-icons/gi";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
+import "./Shared.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -51,7 +52,9 @@ export default function Navbar() {
               href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
               target="blank"
             >
-              <button className="primary-button">My Resume</button>
+              <button className="primary-button">
+                <span>My Resume</span>
+              </button>
             </a>
           </ul>
           <div className="block lg:hidden">
@@ -86,10 +89,13 @@ export default function Navbar() {
                 ))}
                 <li className="text-center">
                   <a
+                    className="inline-block"
                     href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
                     target="blank"
                   >
-                    <button className="primary-button">My Resume</button>
+                    <button className="primary-button">
+                      <span>My Resume</span>
+                    </button>
                   </a>
                 </li>
               </ul>

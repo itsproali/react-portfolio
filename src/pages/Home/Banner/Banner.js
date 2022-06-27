@@ -40,7 +40,9 @@ const Banner = () => {
             href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
             target="blank"
           >
-            <button className="primary-button">My Resume</button>
+            <button className="primary-button">
+              <span>My Resume</span>
+            </button>
           </a>
           <Link to="/about" className="ml-4">
             <button className="btn border-2 border-primary bg-transparent hover:bg-primary text-white duration-500">

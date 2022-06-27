@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Contact.css";
 import "../../components/PrimaryBtn.css";
+import "../shared/Shared.css";
 import { motion, useAnimation } from "framer-motion";
 import {
   FaUserAlt,
@@ -120,9 +121,9 @@ const Contact = () => {
             <button
               type="submit"
               value="Send Message"
-              className="btn bg-primary border-2 border-primary text-white uppercase hover:bg-transparent hover:border-primary duration-300 shadow"
+              className="primary-button"
             >
-              Send Message
+              <span>Send Message</span>
             </button>
           </form>
         </motion.div>
@@ -157,28 +158,28 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary shadow-lg mx-1 duration-300"
+              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaLinkedin></FaLinkedin>
             </a>
             <a
               href="https://www.github.com/itsproali"
               target="blank"
-              className="text-3xl  text-gray-400 hover:text-primary shadow-lg mx-1 duration-300"
+              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaGithubSquare></FaGithubSquare>
             </a>
             <a
               href="https://www.facebook.com/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary shadow-lg mx-1 duration-300"
+              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaFacebookSquare></FaFacebookSquare>
             </a>
             <a
               href="https://www.instagram.com/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary shadow-lg mx-1 duration-300"
+              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaInstagramSquare></FaInstagramSquare>
             </a>

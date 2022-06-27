@@ -3,6 +3,8 @@ import TypeAnimation from "react-type-animation";
 import SkillBar from "react-skillbars";
 import { motion } from "framer-motion";
 import "./About.css";
+import "../../components/PrimaryBtn.css";
+import "../shared/Shared.css";
 
 const About = () => {
   const skills1 = [
@@ -109,7 +111,9 @@ const About = () => {
                 href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
                 target="blank"
               >
-                <button className="primary-button">My Resume</button>
+                <button className="primary-button">
+                  <span>My Resume</span>
+                </button>
               </a>
             </div>
           </motion.div>

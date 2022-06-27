@@ -1,62 +1,60 @@
 .primary-button {
-    border: 2px solid #FF651C;
-    background-color: #FF651C;
     padding: 8px 12px;
-    color: white;
-    cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all .5s;
-    border-radius: 7px;
+    border: 2px solid #FF651C;
+    cursor: pointer;
+    background-color: #FF651C;
+    color: white;
+    transition: all 0.5s ease;
 }
 
-.primary-button::before {
-    width: 100%;
-    height: 100%;
-    content: '';
-    margin: auto;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: #FF651C;
-    transition: all .5s;
-    z-index: -1;
+.primary-button span {
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
 
+.primary-button::after,
+.primary-button::before {
+    width: 0%;
+    height: 0%;
+    content: "";
+    position: absolute;
+    border-radius: 100%;
 }
 
 .primary-button::after {
-    width: 100%;
-    height: 100%;
-    content: '';
-    margin: auto;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: #FF651C;
-    transition: all .5s;
-    z-index: -1;
-
+    transition: all 0.5s ease;
+    background-color: #313131;
 }
 
-.primary-button:hover, .active-btn {
+.primary-button::before {
+    transition: all 0.5s ease-out;
+    background: #ec743c;
+}
+
+.primary-button:hover {
     color: #FF651C;
-    background-color: transparent;
+    transform: translateY(-5px);
 }
 
-.primary-button:active {
-    transform: scale(0.93);
+.primary-button:hover:after,
+.primary-button:hover:before {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
 }
 
-.primary-button:hover::before {
-    z-index: 1;
-    transform: rotateX(90deg);
-
+.primary-button:hover:after {
+    transition: all 0.7s ease-in;
 }
 
-.primary-button:hover::after {
-    z-index: 1;
-    transform: rotateY(90deg);
-
+.primary-button:hover:before {
+    transition: all 0.5s ease-in;
 }
