@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { FaQuoteLeft } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
@@ -7,25 +7,23 @@ import "./Testimonial.css";
 import Reviews from "../../../assets/Reviews";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {
+  headingAnimation,
+  sectionBodyAnimation,
+} from "../../../hooks/useAnimation";
 
 const Testimonial = () => {
   const [ref, inView] = useInView();
+  const [viewDiv, setViewDiv] = useState(false);
   const animation = useAnimation();
-  const headingAnimation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 1.2,
-        },
-      });
-      headingAnimation.start({ y: 0, opacity: 1, transition: { duration: 1 } });
+      setViewDiv(true);
+    } else {
+      setViewDiv(false);
     }
-  }, [inView, animation, headingAnimation]);
+  }, [inView, animation]);
   const settings = {
     dots: true,
     arrows: false,
@@ -56,8 +54,9 @@ const Testimonial = () => {
     <div className="parent py-20">
       <motion.div
         className="mb-8"
-        initial={{ y: -200, opacity: 0 }}
-        animate={headingAnimation}
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={headingAnimation}
       >
         <h3 className="text-gray-400 text-center">What My Clients Say</h3>
         <h1 className="text-4xl font-semibold drop-shadow-md text-center text-primary">
@@ -65,7 +64,12 @@ const Testimonial = () => {
         </h1>
       </motion.div>
 
-      <motion.div ref={ref} initial={{ opacity: 0, y: 20 }} animate={animation}>
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={sectionBodyAnimation}
+      >
         <Slider {...settings}>
           {Reviews.map((review) => (
             <div key={review.id} className="mt-6">

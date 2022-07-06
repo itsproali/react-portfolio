@@ -1,33 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BiPalette } from "react-icons/bi";
 import { DiAtom } from "react-icons/di";
 import { FiServer } from "react-icons/fi";
+import {
+  headingAnimation,
+  sectionBodyAnimation,
+} from "../../../hooks/useAnimation";
 
 const Service = () => {
   const [ref, inView] = useInView();
+  const [viewDiv, setViewDiv] = useState(false);
   const animation = useAnimation();
-  const headingAnimation = useAnimation();
+
   useEffect(() => {
     if (inView) {
-      animation.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 1.2,
-        },
-      });
-      headingAnimation.start({ y: 0, opacity: 1, transition: { duration: 1 } });
+      setViewDiv(true);
+    } else {
+      setViewDiv(false);
     }
-  }, [inView, animation, headingAnimation]);
+  }, [inView, animation]);
   return (
     <div className="parent py-20">
       <motion.div
         className="mb-12"
-        initial={{ y: -200, opacity: 0 }}
-        animate={headingAnimation}
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={headingAnimation}
       >
         <h3 className="text-gray-400 text-center">What I Provide</h3>
         <h1 className="text-4xl font-semibold drop-shadow-md text-center">
@@ -38,8 +38,9 @@ const Service = () => {
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         ref={ref}
-        initial={{ opacity: 0, y: 20 }}
-        animate={animation}
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={sectionBodyAnimation}
       >
         <div
           className="shadow rounded-lg p-6"

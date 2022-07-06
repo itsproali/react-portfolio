@@ -1,7 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { RiMenu3Fill } from "react-icons/ri";
+import {
+  RiMenu3Fill,
+  RiContactsBook2Fill,
+  RiFolderInfoFill,
+} from "react-icons/ri";
 import { GiCrossMark } from "react-icons/gi";
+import { FaHome } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
+import { ImBlog } from "react-icons/im";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import "./Shared.css";
@@ -12,13 +19,13 @@ export default function Navbar() {
     setIsOpen((prevState) => !prevState);
   };
 
-  const navLinks = {
-    Home: "/",
-    About: "/about",
-    Project: "/project",
-    Contact: "/contact",
-    Blog: "/blog",
-  };
+  const navLinks = [
+    { title: "Home", link: "/", icon: <FaHome /> },
+    { title: "About", link: "/about", icon: <RiFolderInfoFill /> },
+    { title: "Project", link: "/project", icon: <MdWork /> },
+    { title: "Contact", link: "/contact", icon: <RiContactsBook2Fill /> },
+    { title: "Blog", link: "/blog", icon: <ImBlog /> },
+  ];
   const activeLink = ({ isActive }) => {
     return {
       fontWeight: 500,
@@ -39,10 +46,10 @@ export default function Navbar() {
         </div>
         <div>
           <ul className="lg:flex items-center hidden">
-            {Object.entries(navLinks).map((link) => (
-              <li className="mx-4" key={link[0]}>
-                <NavLink to={link[1]} style={activeLink}>
-                  {link[0]}
+            {navLinks.map((navItem) => (
+              <li className="mx-4" key={navItem.title}>
+                <NavLink to={navItem.link} style={activeLink}>
+                  {navItem.title}
                 </NavLink>
               </li>
             ))}
@@ -75,25 +82,29 @@ export default function Navbar() {
                     onClick={() => setIsOpen(!isOpen)}
                   ></GiCrossMark>
                 </li>
-                {Object.entries(navLinks).map((link) => (
-                  <li key={link[0]}>
+                {navLinks.map((navItem) => (
+                  <li
+                    className="m-4"
+                    key={navItem.title}
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
                     <NavLink
-                      to={link[1]}
-                      className="btn btn-ghost rounded-none w-full"
+                      to={navItem.link}
                       style={activeLink}
-                      onClick={() => setIsOpen(!isOpen)}
+                      className="flex items-center"
                     >
-                      {link[0]}
+                      <span className="mr-3">{navItem.icon}</span>
+                      <span>{navItem.title}</span>
                     </NavLink>
                   </li>
                 ))}
-                <li className="text-center">
+                <li className="text-center m-4">
                   <a
-                    className="inline-block"
+                    className="inline-block w-full"
                     href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
                     target="blank"
                   >
-                    <button className="primary-button">
+                    <button className="btn btn-primary w-full text-white">
                       <span>My Resume</span>
                     </button>
                   </a>

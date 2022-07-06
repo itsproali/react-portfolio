@@ -2,9 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TypeAnimation from "react-type-animation";
 import { motion } from "framer-motion";
+import Lottie from "react-lottie";
+import coding from "../../../assets/coding.json";
 import "../../shared/Shared.css";
 
 const Banner = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: coding,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <div className="parent min-h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-between">
       <motion.div
@@ -57,7 +67,8 @@ const Banner = () => {
         animate={{ x: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <img src="https://i.ibb.co/rf89pDm/coding.png" alt="Mohammad Ali" />
+        {/* <img src="https://i.ibb.co/rf89pDm/coding.png" alt="Mohammad Ali" /> */}
+        <Lottie options={defaultOptions} height={400} width={400} />
       </motion.div>
     </div>
   );

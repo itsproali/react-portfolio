@@ -4,30 +4,29 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link, useLocation } from "react-router-dom";
 import "./Project.css";
+import {
+  headingAnimation,
+  sectionBodyAnimation,
+} from "../../hooks/useAnimation";
 
 const Project = () => {
   const [items, setItems] = useState(Items);
   const [activeBtn, setActiveBtn] = useState("all");
-  const [ref, inView] = useInView();
-  const animation = useAnimation();
-  const headingAnimation = useAnimation();
   const location = useLocation();
+  const [ref, inView] = useInView();
+  const [viewDiv, setViewDiv] = useState(false);
+  const animation = useAnimation();
+
   useEffect(() => {
     if (inView) {
-      animation.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 1.2,
-        },
-      });
-      headingAnimation.start({ y: 0, opacity: 1, transition: { duration: 1 } });
+      setViewDiv(true);
+    } else {
+      setViewDiv(false);
     }
     if (location.pathname === "/" && items.length > 3) {
       setItems(items.slice(0, 3));
     }
-  }, [inView, headingAnimation, animation, location, items]);
+  }, [inView, animation, location, items]);
 
   const filterItem = (category) => {
     const filtered = Items.filter((item) => item.category === category);
@@ -39,7 +38,11 @@ const Project = () => {
 
   return (
     <div className="parent py-20">
-      <motion.div initial={{ y: -200, opacity: 0 }} animate={headingAnimation}>
+      <motion.div
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={headingAnimation}
+      >
         <div className="mb-12">
           <h1 className="text-4xl font-semibold drop-shadow-md text-center">
             Featured <span className="text-primary">Projects</span>
@@ -99,8 +102,9 @@ const Project = () => {
       </motion.div>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 20 }}
-        animate={animation}
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={sectionBodyAnimation}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {items.map((item) => (

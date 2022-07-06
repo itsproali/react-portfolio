@@ -78,7 +78,7 @@ const ProjectDetails = () => {
       </div>
       <div className="flex items-center mt-8">
         <a href={item?.liveLink} className="mr-4" target="blank">
-          <PrimaryBtn>Visit Now</PrimaryBtn>
+          <PrimaryBtn><span>Visit Now</span></PrimaryBtn>
         </a>
         <a href={item?.codeLink} target="blank">
           <button className="btn border-2 border-primary bg-transparent hover:bg-primary text-white duration-500">

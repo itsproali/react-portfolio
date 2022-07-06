@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Contact.css";
 import "../../components/PrimaryBtn.css";
 import "../shared/Shared.css";
@@ -17,27 +17,25 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import {
+  headingAnimation,
+  contactAnimation,
+} from "../../hooks/useAnimation";
 
 const Contact = () => {
   const navigate = useNavigate();
   const form = useRef();
-  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [viewDiv, setViewDiv] = useState(false);
   const animation = useAnimation();
-  const headingAnimation = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animation.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          delay: 1.2,
-          duration: 1,
-        },
-      });
-      headingAnimation.start({ y: 0, opacity: 1, transition: { duration: 1 } });
+      setViewDiv(true);
+    } else {
+      setViewDiv(false);
     }
-  }, [inView, animation, headingAnimation]);
+  }, [inView, animation]);
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -68,7 +66,11 @@ const Contact = () => {
   };
   return (
     <div className="parent py-20">
-      <motion.div initial={{ y: -200, opacity: 0 }} animate={headingAnimation}>
+      <motion.div
+        initial="hidden"
+        animate={viewDiv && "visible"}
+        variants={headingAnimation}
+      >
         <h3 className="text-gray-400 text-center">Feel Free To Contact Me</h3>
         <h1 className="text-4xl font-semibold drop-shadow-md text-center">
           Get In <span className="text-primary">Touch</span>
@@ -78,8 +80,9 @@ const Contact = () => {
         <motion.div
           className=""
           ref={ref}
-          initial={{ y: 50, opacity: 0 }}
-          animate={animation}
+          initial="hidden"
+          animate={viewDiv && "visible"}
+          variants={contactAnimation}
         >
           <h2 className="text-2xl font-medium">Contact Me</h2>
           <form ref={form} onSubmit={handleSend}>
@@ -130,7 +133,8 @@ const Contact = () => {
         <motion.div
           className=""
           initial={{ y: 50, opacity: 0 }}
-          animate={animation}
+          animate={viewDiv && "visible"}
+          variants={contactAnimation}
         >
           <h2 className="text-2xl font-medium">Contact Info</h2>
           <div className="flex items-center my-6">
