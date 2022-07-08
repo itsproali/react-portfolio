@@ -113,10 +113,7 @@ const About = () => {
               />
             </div>
             <p className="text-gray-400 font-medium">
-              Front-end developer with 1 years + front end experience. Capable
-              to solve working problems. Passionate about learning & development
-              to reach the target. Eager to tackle more complex problems and
-              continue to find ways to maximize user efficiency.
+              Dedicated Front-end developer. Capable to solve working problems. Passionate about learning & development to reach the target. Eager to tackle more complex problems and continue to find ways to maximize user efficiency.
             </p>
             <br />
             <p className="text-gray-400 font-medium">

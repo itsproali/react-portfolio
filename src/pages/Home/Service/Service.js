@@ -43,8 +43,7 @@ const Service = () => {
         variants={sectionBodyAnimation}
       >
         <div
-          className="shadow rounded-lg p-6"
-          style={{ backgroundColor: "#313131" }}
+          className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300"
         >
           <div className="text-center mb-4">
             <DiAtom className="text-primary text-5xl inline-block"></DiAtom>
@@ -59,8 +58,7 @@ const Service = () => {
         </div>
 
         <div
-          className="shadow-xl rounded-lg p-6"
-          style={{ backgroundColor: "#212121" }}
+          className="shadow-lg rounded-lg p-6 bg-accent hover:shadow-primary duration-300"
         >
           <div className="text-center mb-4">
             <FiServer className="text-primary text-5xl inline-block"></FiServer>
@@ -75,8 +73,7 @@ const Service = () => {
         </div>
 
         <div
-          className="shadow rounded-lg p-6"
-          style={{ backgroundColor: "#313131" }}
+          className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300"
         >
           <div className="text-center mb-4">
             <BiPalette className="text-primary text-5xl inline-block"></BiPalette>

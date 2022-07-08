@@ -68,7 +68,7 @@ const Banner = () => {
         transition={{ duration: 1.5 }}
       >
         {/* <img src="https://i.ibb.co/rf89pDm/coding.png" alt="Mohammad Ali" /> */}
-        <Lottie options={defaultOptions} height={400} width={400} />
+        <Lottie options={defaultOptions} height="90%" width="90%" />
       </motion.div>
     </div>
   );
