@@ -21,6 +21,7 @@ import {
   headingAnimation,
   contactAnimation,
 } from "../../hooks/useAnimation";
+import BottomLine from "../../components/BottomLine";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -75,6 +76,7 @@ const Contact = () => {
         <h1 className="text-4xl font-semibold drop-shadow-md text-center">
           Get In <span className="text-primary">Touch</span>
         </h1>
+        <BottomLine />
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         <motion.div

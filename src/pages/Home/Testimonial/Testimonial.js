@@ -11,6 +11,7 @@ import {
   headingAnimation,
   sectionBodyAnimation,
 } from "../../../hooks/useAnimation";
+import BottomLine from "../../../components/BottomLine";
 
 const Testimonial = () => {
   const [ref, inView] = useInView();
@@ -59,9 +60,10 @@ const Testimonial = () => {
         variants={headingAnimation}
       >
         <h3 className="text-gray-400 text-center">What My Clients Say</h3>
-        <h1 className="text-4xl font-semibold drop-shadow-md text-center text-primary">
+        <h1 className="text-4xl font-semibold text-center text-primary">
           Testimonials
         </h1>
+        <BottomLine />
       </motion.div>
 
       <motion.div

@@ -3,7 +3,7 @@ const Reviews = [
     id: 1,
     name: "John Smith",
     city: "Dhaka, Bangladesh",
-    img: "https://i.ibb.co/MGXNxNM/Mohammad-Ali-Profile-Circle.png",
+    img: "https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png",
     description:
       "I am very impressed to work with him. He is a very good and skilled person. I want to work with him again.",
     rating: 5.0,

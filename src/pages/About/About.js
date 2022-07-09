@@ -22,6 +22,7 @@ import man from "../../assets/man.json";
 import "./About.css";
 import "../../components/PrimaryBtn.css";
 import "../shared/Shared.css";
+import BottomLine from "../../components/BottomLine";
 
 const About = () => {
   const languages = [
@@ -70,6 +71,7 @@ const About = () => {
           <h1 className="text-4xl font-semibold drop-shadow-md text-center">
             About <span className="text-primary">Me</span>
           </h1>
+          <BottomLine />
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
@@ -77,7 +79,7 @@ const About = () => {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, delay: 1.5 },
+              transition: { duration: 1, delay: 2 },
             }}
           >
             <img
@@ -92,7 +94,7 @@ const About = () => {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, delay: 1.5 },
+              transition: { duration: 1, delay: 2 },
             }}
           >
             <h1 className="text-4xl font-semibold mb-0">Mohammad Ali</h1>
@@ -113,7 +115,10 @@ const About = () => {
               />
             </div>
             <p className="text-gray-400 font-medium">
-              Dedicated Front-end developer. Capable to solve working problems. Passionate about learning & development to reach the target. Eager to tackle more complex problems and continue to find ways to maximize user efficiency.
+              Dedicated Front-end developer. Capable to solve working problems.
+              Passionate about learning & development to reach the target. Eager
+              to tackle more complex problems and continue to find ways to
+              maximize user efficiency.
             </p>
             <br />
             <p className="text-gray-400 font-medium">

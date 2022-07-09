@@ -8,6 +8,7 @@ import {
   headingAnimation,
   sectionBodyAnimation,
 } from "../../../hooks/useAnimation";
+import BottomLine from "../../../components/BottomLine";
 
 const Service = () => {
   const [ref, inView] = useInView();
@@ -30,9 +31,10 @@ const Service = () => {
         variants={headingAnimation}
       >
         <h3 className="text-gray-400 text-center">What I Provide</h3>
-        <h1 className="text-4xl font-semibold drop-shadow-md text-center">
+        <h1 className="text-4xl font-semibold text-center">
           My <span className="text-primary">Services</span>
         </h1>
+        <BottomLine />
       </motion.div>
 
       <motion.div
@@ -42,9 +44,7 @@ const Service = () => {
         animate={viewDiv && "visible"}
         variants={sectionBodyAnimation}
       >
-        <div
-          className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300"
-        >
+        <div className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300">
           <div className="text-center mb-4">
             <DiAtom className="text-primary text-5xl inline-block"></DiAtom>
           </div>
@@ -57,9 +57,7 @@ const Service = () => {
           </p>
         </div>
 
-        <div
-          className="shadow-lg rounded-lg p-6 bg-accent hover:shadow-primary duration-300"
-        >
+        <div className="shadow-lg rounded-lg p-6 bg-accent hover:shadow-primary duration-300">
           <div className="text-center mb-4">
             <FiServer className="text-primary text-5xl inline-block"></FiServer>
           </div>
@@ -72,9 +70,7 @@ const Service = () => {
           </p>
         </div>
 
-        <div
-          className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300"
-        >
+        <div className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300">
           <div className="text-center mb-4">
             <BiPalette className="text-primary text-5xl inline-block"></BiPalette>
           </div>
