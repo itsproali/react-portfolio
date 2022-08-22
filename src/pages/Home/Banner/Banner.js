@@ -22,7 +22,7 @@ const Banner = () => {
         animate={{ x: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <h2 className="text-gray-400 text-xl font-medium">Hello, I'm</h2>
+        <h2 className="text-neutral text-xl font-medium">Hello, I'm</h2>
         <h1 className="text-4xl font-semibold mb-0">Mohammad Ali</h1>
         <div className="my-4">
           <TypeAnimation
@@ -40,7 +40,7 @@ const Banner = () => {
             repeat={Infinity}
           />
         </div>
-        <p className="text-gray-400 max-w-md mb-6 font-medium">
+        <p className="text-neutral max-w-md mb-6 font-medium">
           I am Jr. Front-end Developer. I am very passionate to my work and
           dedicated to explore New Tools And Technologies.
         </p>

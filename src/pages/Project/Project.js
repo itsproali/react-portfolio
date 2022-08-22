@@ -10,7 +10,6 @@ import {
 } from "../../hooks/useAnimation";
 import BottomLine from "../../components/BottomLine";
 
-
 const Project = () => {
   const [items, setItems] = useState(Items);
   const [activeBtn, setActiveBtn] = useState("all");
@@ -46,13 +45,13 @@ const Project = () => {
         variants={headingAnimation}
       >
         <div className="mb-12">
-          <h3 className="text-gray-400 text-center">
+          <h3 className="text-neutral text-center">
             Some of my recent Projects
           </h3>
           <h1 className="text-4xl font-semibold text-center">
             Featured <span className="text-primary">Projects</span>
           </h1>
-          <BottomLine/>
+          <BottomLine />
         </div>
         <div className="my-6 flex items-center justify-center flex-wrap">
           <button

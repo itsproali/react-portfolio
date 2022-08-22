@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        eduBg: "url('/src/assets/orange-shape.png')",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -14,7 +18,7 @@ module.exports = {
 
           accent: "#212121",
 
-          neutral: "#3D4451",
+          neutral: "#9ca3af",
 
           "base-100": "#FFFFFF",
 

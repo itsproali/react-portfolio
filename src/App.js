@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import React, { Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 const Navbar = React.lazy(() => import("./pages/shared/Navbar"));
@@ -15,10 +15,13 @@ const NotFound = React.lazy(() => import("./pages/shared/NotFound"));
 const Loader = React.lazy(() => import("./pages/shared/Loader"));
 
 function App() {
+  const location = useLocation();
+  const isFalse = location.pathname.includes("404");
+  console.log(isFalse);
   return (
     <div>
       <ScrollToTop />
-      <Navbar />
+      {isFalse || <Navbar />}
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,10 +31,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/loader" element={<Loader />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate replace to="/404" />}></Route>
         </Routes>
       </Suspense>
-      <Footer />
+      {isFalse || <Footer />}
     </div>
   );
 }

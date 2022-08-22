@@ -12,6 +12,7 @@ import { ImBlog } from "react-icons/im";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import "./Shared.css";
+import PrimaryBtn from "../../components/PrimaryBtn";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -29,7 +30,7 @@ export default function Navbar() {
   const activeLink = ({ isActive }) => {
     return {
       fontWeight: 500,
-      color: isActive ? "#FF651C" : "white",
+      color: isActive && "#FF651C",
     };
   };
 
@@ -48,7 +49,11 @@ export default function Navbar() {
           <ul className="lg:flex items-center hidden">
             {navLinks.map((navItem) => (
               <li className="mx-4" key={navItem.title}>
-                <NavLink to={navItem.link} style={activeLink}>
+                <NavLink
+                  to={navItem.link}
+                  style={activeLink}
+                  className="text-white hover:text-primary duration-300"
+                >
                   {navItem.title}
                 </NavLink>
               </li>
@@ -59,9 +64,9 @@ export default function Navbar() {
               href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
               target="blank"
             >
-              <button className="primary-button">
+              <PrimaryBtn>
                 <span>My Resume</span>
-              </button>
+              </PrimaryBtn>
             </a>
           </ul>
           <div className="block lg:hidden">
@@ -76,7 +81,7 @@ export default function Navbar() {
               className="bla bla bla"
             >
               <ul className="">
-                <li className="mt-6 ml-4">
+                <li className="mt-6 mb-10 ml-4">
                   <GiCrossMark
                     className="cursor-pointer hover:text-primary duration-300"
                     onClick={() => setIsOpen(!isOpen)}
@@ -91,7 +96,7 @@ export default function Navbar() {
                     <NavLink
                       to={navItem.link}
                       style={activeLink}
-                      className="flex items-center"
+                      className="flex items-center text-white hover:text-primary duration-300"
                     >
                       <span className="mr-3">{navItem.icon}</span>
                       <span>{navItem.title}</span>
@@ -104,7 +109,7 @@ export default function Navbar() {
                     href="https://drive.google.com/file/d/1qVQ1OLO-5RxHy1rwbe5Ib9igCTfeO99f/view?usp=sharing"
                     target="blank"
                   >
-                    <button className="btn btn-primary w-full text-white">
+                    <button className="primary-button w-full text-white">
                       <span>My Resume</span>
                     </button>
                   </a>

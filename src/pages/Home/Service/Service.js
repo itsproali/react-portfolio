@@ -30,7 +30,7 @@ const Service = () => {
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
-        <h3 className="text-gray-400 text-center">What I Provide</h3>
+        <h3 className="text-neutral text-center">What I Provide</h3>
         <h1 className="text-4xl font-semibold text-center">
           My <span className="text-primary">Services</span>
         </h1>
@@ -51,7 +51,7 @@ const Service = () => {
           <h2 className="text-2xl font-semibold text-center mb-4">
             Front end Development
           </h2>
-          <p className="text-gray-400">
+          <p className="text-neutral">
             As a Front-end developer, I would love to develope any front-end
             application using React and its libraries.
           </p>
@@ -64,7 +64,7 @@ const Service = () => {
           <h2 className="text-2xl font-semibold text-center mb-4">
             MERN Development
           </h2>
-          <p className="text-gray-400">
+          <p className="text-neutral">
             I am very familiar with NodeJS, Express JS, and MongoDB. So I can
             build full-stack application with MERN.
           </p>
@@ -77,7 +77,7 @@ const Service = () => {
           <h2 className="text-2xl font-semibold text-center mb-4">
             Web Design
           </h2>
-          <p className="text-gray-400">
+          <p className="text-neutral">
             I also provide Fully Responsive Static Website Design with HTML,
             CSS, Bootstrap, Tailwind.
           </p>

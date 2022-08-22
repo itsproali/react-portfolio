@@ -17,10 +17,7 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import {
-  headingAnimation,
-  contactAnimation,
-} from "../../hooks/useAnimation";
+import { headingAnimation, contactAnimation } from "../../hooks/useAnimation";
 import BottomLine from "../../components/BottomLine";
 
 const Contact = () => {
@@ -72,7 +69,7 @@ const Contact = () => {
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
-        <h3 className="text-gray-400 text-center">Feel Free To Contact Me</h3>
+        <h3 className="text-neutral text-center">Feel Free To Contact Me</h3>
         <h1 className="text-4xl font-semibold drop-shadow-md text-center">
           Get In <span className="text-primary">Touch</span>
         </h1>
@@ -159,33 +156,33 @@ const Contact = () => {
             </h3>
           </div>
           <div className="mt-8 flex items-center">
-            <h3 className="text-xl text-gray-400">Social</h3>
+            <h3 className="text-xl text-neutral">Social</h3>
             <div className="bg-gray-400 w-10 h-[2px] mx-4"></div>
             <a
               href="https://www.linkedin.com/in/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
+              className="text-3xl text-neutral hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaLinkedin></FaLinkedin>
             </a>
             <a
               href="https://www.github.com/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
+              className="text-3xl text-neutral hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaGithubSquare></FaGithubSquare>
             </a>
             <a
               href="https://www.facebook.com/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
+              className="text-3xl text-neutral hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaFacebookSquare></FaFacebookSquare>
             </a>
             <a
               href="https://www.instagram.com/itsproali"
               target="blank"
-              className="text-3xl text-gray-400 hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
+              className="text-3xl text-neutral hover:text-primary hover:-translate-y-1.5 shadow-lg mx-1 duration-300"
             >
               <FaInstagramSquare></FaInstagramSquare>
             </a>

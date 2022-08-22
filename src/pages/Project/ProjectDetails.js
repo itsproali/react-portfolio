@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           </div>
         ))}
       </Slider>
-      <p className="text-gray-400 font-medium mt-8">
+      <p className="text-neutral font-medium mt-8">
         <span className="font-semibold text-white text-xl">Description: </span>{" "}
         {item?.description}
       </p>
@@ -59,7 +59,7 @@ const ProjectDetails = () => {
         <h2 className="text-2xl font-semibld mb-3">Features:</h2>
         <ul className="list-disc grid grid-cols-1 md:grid-cols-2 ml-4">
           {item?.features?.map((feature, index) => (
-            <li key={index} className="text-gray-400">
+            <li key={index} className="text-neutral">
               {feature}
             </li>
           ))}
@@ -70,7 +70,7 @@ const ProjectDetails = () => {
         <h2 className="text-2xl font-semibld mb-3">Tools & Technologies:</h2>
         <ul className="list-disc grid grid-cols-1 md:grid-cols-2 ml-4">
           {item?.technologies?.map((feature, index) => (
-            <li key={index} className="text-gray-400">
+            <li key={index} className="text-neutral">
               {feature}
             </li>
           ))}
@@ -78,7 +78,9 @@ const ProjectDetails = () => {
       </div>
       <div className="flex items-center mt-8">
         <a href={item?.liveLink} className="mr-4" target="blank">
-          <PrimaryBtn><span>Visit Now</span></PrimaryBtn>
+          <PrimaryBtn>
+            <span>Visit Now</span>
+          </PrimaryBtn>
         </a>
         <a href={item?.codeLink} target="blank">
           <button className="btn border-2 border-primary bg-transparent hover:bg-primary text-white duration-500">

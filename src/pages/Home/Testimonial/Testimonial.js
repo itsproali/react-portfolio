@@ -59,7 +59,7 @@ const Testimonial = () => {
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
-        <h3 className="text-gray-400 text-center">What My Clients Say</h3>
+        <h3 className="text-neutral text-center">What My Clients Say</h3>
         <h1 className="text-4xl font-semibold text-center text-primary">
           Testimonials
         </h1>
@@ -85,10 +85,8 @@ const Testimonial = () => {
                 </div>
                 <div className="bg-primary mt-12 flex justify-end px-6 py-2 rounded-b">
                   <div className="text-right mr-4 text-gray-200">
-                    <h2 className="text-center font-medium leading-none">
-                      {review.name}
-                    </h2>
-                    <p className="text-xs leading-none">{review.city}</p>
+                    <h2 className="font-medium leading-none">{review.name}</h2>
+                    <p className="text-xs leading-none">{review.bio}</p>
                   </div>
                   <img
                     src={review.img}
