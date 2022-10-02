@@ -7,7 +7,7 @@ export const headingAnimation = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 1 },
+    transition: { duration: 1, type: "spring" },
   },
 };
 
@@ -22,7 +22,7 @@ export const sectionBodyAnimation = {
     y: 0,
     transition: {
       duration: 0.5,
-      delay: 1.2,
+      delay: 0.75,
     },
   },
 };
@@ -36,8 +36,8 @@ export const contactAnimation = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 1.2,
-      duration: 1,
+      delay: 0.75,
+      duration: 0.5,
     },
   },
 };

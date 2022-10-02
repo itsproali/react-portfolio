@@ -15,7 +15,9 @@ const NotFound = () => {
         <Link to="/">
           <PrimaryBtn>
             <span>Go To HomePage</span>
-            <FaHome className="ml-2"></FaHome>
+            <span>
+              <FaHome></FaHome>
+            </span>
           </PrimaryBtn>
         </Link>
       </div>

@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa";
+import { RiFolderInfoFill } from "react-icons/ri";
 import TypeAnimation from "react-type-animation";
 import { motion } from "framer-motion";
 import Lottie from "react-lottie";
 import coding from "../../../assets/coding.json";
 import "../../shared/Shared.css";
+import SecondaryBtn from "../../../components/SecondaryBtn";
 
 const Banner = () => {
   const defaultOptions = {
@@ -52,12 +55,18 @@ const Banner = () => {
           >
             <button className="primary-button">
               <span>My Resume</span>
+              <span>
+                <FaDownload />
+              </span>
             </button>
           </a>
           <Link to="/about" className="ml-4">
-            <button className="btn border-2 border-primary bg-transparent hover:bg-primary text-white duration-500">
-              About Me
-            </button>
+            <SecondaryBtn>
+              <span>About Me</span>
+              <span>
+                <RiFolderInfoFill />
+              </span>
+            </SecondaryBtn>
           </Link>
         </div>
       </motion.div>
@@ -67,7 +76,6 @@ const Banner = () => {
         animate={{ x: 0 }}
         transition={{ duration: 1.5 }}
       >
-        {/* <img src="https://i.ibb.co/rf89pDm/coding.png" alt="Mohammad Ali" /> */}
         <Lottie options={defaultOptions} height="90%" width="90%" />
       </motion.div>
     </div>

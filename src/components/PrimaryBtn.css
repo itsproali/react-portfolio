@@ -18,6 +18,7 @@
 .primary-button span {
     z-index: 1;
     transition: all 0.3s ease-out;
+    margin: 0 5px;
 }
 
 .primary-button::after,

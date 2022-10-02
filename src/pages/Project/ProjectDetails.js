@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import Items from "../../assets/Items";
 import PrimaryBtn from "../../components/PrimaryBtn";
+import SecondaryBtn from "../../components/SecondaryBtn";
+import { FaLink, FaCode } from "react-icons/fa";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -51,12 +53,12 @@ const ProjectDetails = () => {
           </div>
         ))}
       </Slider>
-      <p className="text-neutral font-medium mt-8">
+      <p className="text-neutral font-medium mt-10 mb-6">
         <span className="font-semibold text-white text-xl">Description: </span>{" "}
         {item?.description}
       </p>
-      <div className="my-4">
-        <h2 className="text-2xl font-semibld mb-3">Features:</h2>
+      <div className="my-6">
+        <h2 className="text-2xl font-semibold mb-3">Features:</h2>
         <ul className="list-disc grid grid-cols-1 md:grid-cols-2 ml-4">
           {item?.features?.map((feature, index) => (
             <li key={index} className="text-neutral">
@@ -66,8 +68,8 @@ const ProjectDetails = () => {
         </ul>
       </div>
 
-      <div className="my-4">
-        <h2 className="text-2xl font-semibld mb-3">Tools & Technologies:</h2>
+      <div className="my-6">
+        <h2 className="text-2xl font-semibold mb-3">Tools & Technologies:</h2>
         <ul className="list-disc grid grid-cols-1 md:grid-cols-2 ml-4">
           {item?.technologies?.map((feature, index) => (
             <li key={index} className="text-neutral">
@@ -80,12 +82,18 @@ const ProjectDetails = () => {
         <a href={item?.liveLink} className="mr-4" target="blank">
           <PrimaryBtn>
             <span>Visit Now</span>
+            <span>
+              <FaLink />
+            </span>
           </PrimaryBtn>
         </a>
         <a href={item?.codeLink} target="blank">
-          <button className="btn border-2 border-primary bg-transparent hover:bg-primary text-white duration-500">
-            See Code
-          </button>
+          <SecondaryBtn>
+            <span>Source Code</span>
+            <span>
+              <FaCode />
+            </span>
+          </SecondaryBtn>
         </a>
       </div>
     </div>

@@ -1,6 +1,45 @@
 const Items = [
   {
     id: 1,
+    mainImage: "https://i.ibb.co/Nm206nP/jobs-ladder-main.png",
+    img: [
+      "https://i.ibb.co/YXkdynd/register.png",
+      "https://i.ibb.co/KyY9frq/Screenshot-2.png",
+      "https://i.ibb.co/bzzCKGF/Screenshot-3.png",
+      "https://i.ibb.co/PDyt1hg/Screenshot-4.png",
+      "https://i.ibb.co/BrhBg7W/Screenshot-5.png",
+      "https://i.ibb.co/yRxFbMh/Screenshot-6.png",
+      "https://i.ibb.co/7ygmj9H/Screenshot-7.png",
+    ],
+    features: [
+      "An User can log in with different 3 roles. (HR, Employee, and Job Seeker).",
+      "An Hr can post jobs with his requirements.",
+      "A Job Seeker will see all the posted jobs and will be able to apply there.",
+      " HR can manage the candidates. like sending them tasks or could remove them.",
+      "Notify an Important task with their Email.",
+      "HR can also send tasks or contact his company's employees.",
+      "Secured Front-end Routes and back-end API's.",
+    ],
+    technologies: [
+      "React",
+      "Redux",
+      "TailwindCSS",
+      "Firebase",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Send In Blue",
+      "JWT etc.",
+    ],
+    title: "Job's Ladder",
+    description:
+      "This is the Company Managing Website to help the hr of the company. Where HR, Employees, and Job Seekers will connect to each other. Job Seeker will find their desired jobs and could apply for these. Hr will be able to manage candidates and employees by sending them tasks, emails, or contact with them.",
+    category: "business",
+    liveLink: "https://job-ledder.web.app/",
+    codeLink: "https://github.com/shakil18046/Job-s-Ladder",
+  },
+  {
+    id: 2,
     mainImage: "https://i.ibb.co/gd6qmZf/allied-main.png",
     img: [
       "https://i.ibb.co/cNCSRSH/allied-parts.png",
@@ -35,7 +74,7 @@ const Items = [
     codeLink: "https://github.com/itsproali/allied-parts-client",
   },
   {
-    id: 2,
+    id: 3,
     mainImage: "https://i.ibb.co/bsFpVR1/super-bike-main.png",
     img: [
       "https://i.ibb.co/Jtdzytx/bike-1.png",
@@ -72,7 +111,7 @@ const Items = [
     codeLink: "https://github.com/itsproali/super-bike-client",
   },
   {
-    id: 3,
+    id: 4,
     mainImage: "https://i.ibb.co/c8ykxZv/learning-buddy-main.png",
     img: [
       "https://i.ibb.co/Twk9w2x/learning-buddy-1.png",
@@ -103,7 +142,7 @@ const Items = [
     codeLink: "https://github.com/itsproali/learning-buddy",
   },
   {
-    id: 4,
+    id: 5,
     mainImage: "https://i.ibb.co/r49F3pZ/convention-center-main.png",
     img: [
       "https://i.ibb.co/YhH7rZg/convention-center-1.png",

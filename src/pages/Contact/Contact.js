@@ -12,7 +12,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
 } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdSend } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -125,7 +125,8 @@ const Contact = () => {
               value="Send Message"
               className="primary-button"
             >
-              <span>Send Message</span>
+              <span>Send</span>
+              <span><MdSend/></span>
             </button>
           </form>
         </motion.div>

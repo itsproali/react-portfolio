@@ -6,7 +6,7 @@ import {
   RiFolderInfoFill,
 } from "react-icons/ri";
 import { GiCrossMark } from "react-icons/gi";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaDownload } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
 import Drawer from "react-modern-drawer";
@@ -65,7 +65,8 @@ export default function Navbar() {
               target="blank"
             >
               <PrimaryBtn>
-                <span>My Resume</span>
+                <span>Resume</span>
+                <span><FaDownload /></span>
               </PrimaryBtn>
             </a>
           </ul>
@@ -110,7 +111,8 @@ export default function Navbar() {
                     target="blank"
                   >
                     <button className="primary-button w-full text-white">
-                      <span>My Resume</span>
+                      <span>Resume</span>
+                      <span><FaDownload /></span>
                     </button>
                   </a>
                 </li>

@@ -7,6 +7,7 @@ import "../shared/Shared.css";
 import BottomLine from "../../components/BottomLine";
 import MySkill from "./MySkill";
 import Education from "./Education";
+import { FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -15,7 +16,11 @@ const About = () => {
         <motion.div
           className="mb-12"
           initial={{ y: -200, opacity: 0 }}
-          animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1, type: "spring" },
+          }}
         >
           <h3 className="text-neutral text-center">Something About Myself</h3>
           <h1 className="text-4xl font-semibold drop-shadow-md text-center">
@@ -97,6 +102,9 @@ const About = () => {
               >
                 <button className="primary-button">
                   <span>My Resume</span>
+                  <span>
+                    <FaDownload />
+                  </span>
                 </button>
               </a>
             </div>

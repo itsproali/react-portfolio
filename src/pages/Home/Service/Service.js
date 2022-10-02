@@ -22,6 +22,51 @@ const Service = () => {
       setViewDiv(false);
     }
   }, [inView, animation]);
+
+  const services = [
+    {
+      id: 1,
+      title: "Front End Development",
+      icon: <DiAtom />,
+      description:
+        "As a Front-end developer, I would love to develope any front-end application using React and its libraries.",
+    },
+    {
+      id: 2,
+      title: "MERN Development",
+      icon: <FiServer />,
+      description:
+        "I am very familiar with NodeJS, Express JS, and MongoDB/Mongoose. So I can build full-stack application with MERN.",
+    },
+    {
+      id: 3,
+      title: "Web Design",
+      icon: <BiPalette />,
+      description:
+        "I also provide Fully Responsive Static Website Design with HTML, CSS, Bootstrap, Tailwind.",
+    },
+    // {
+    //   id: 4,
+    //   title: "Web Management",
+    //   icon: <FiServer />,
+    //   description:
+    //     "I will manage any kinds of website. Data Management, Component management, Service management and so on.",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Backend Development",
+    //   icon: <FiServer />,
+    //   description:
+    //   "MVC Architectural Backend Development with Mongoose (Schema, Model etc) to manage the server easily.",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Database Management",
+    //   icon: <FiServer />,
+    //   description:
+    //     "Connecting Web Database to the server. Fixing All kinds of issue with related to database with database advanced operators.",
+    // },
+  ];
   return (
     <div className="parent py-20">
       <motion.div
@@ -44,44 +89,26 @@ const Service = () => {
         animate={viewDiv && "visible"}
         variants={sectionBodyAnimation}
       >
-        <div className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300">
-          <div className="text-center mb-4">
-            <DiAtom className="text-primary text-5xl inline-block"></DiAtom>
+        {services?.map((service) => (
+          <div
+            key={service.id}
+            className={`${
+              service.id % 2 === 0
+                ? "bg-accent shadow-lg"
+                : "bg-[#313131] shadow-md"
+            } rounded-lg p-6 hover:shadow-primary cursor-pointer duration-300`}
+          >
+            <div className="text-center mb-4">
+              <span className="text-primary text-5xl inline-block">
+                {service.icon}
+              </span>
+            </div>
+            <h2 className="text-2xl font-semibold text-center mb-4">
+              {service.title}
+            </h2>
+            <p className="text-neutral">{service.description}</p>
           </div>
-          <h2 className="text-2xl font-semibold text-center mb-4">
-            Front end Development
-          </h2>
-          <p className="text-neutral">
-            As a Front-end developer, I would love to develope any front-end
-            application using React and its libraries.
-          </p>
-        </div>
-
-        <div className="shadow-lg rounded-lg p-6 bg-accent hover:shadow-primary duration-300">
-          <div className="text-center mb-4">
-            <FiServer className="text-primary text-5xl inline-block"></FiServer>
-          </div>
-          <h2 className="text-2xl font-semibold text-center mb-4">
-            MERN Development
-          </h2>
-          <p className="text-neutral">
-            I am very familiar with NodeJS, Express JS, and MongoDB. So I can
-            build full-stack application with MERN.
-          </p>
-        </div>
-
-        <div className="shadow-md rounded-lg p-6 bg-[#313131] hover:shadow-primary duration-300">
-          <div className="text-center mb-4">
-            <BiPalette className="text-primary text-5xl inline-block"></BiPalette>
-          </div>
-          <h2 className="text-2xl font-semibold text-center mb-4">
-            Web Design
-          </h2>
-          <p className="text-neutral">
-            I also provide Fully Responsive Static Website Design with HTML,
-            CSS, Bootstrap, Tailwind.
-          </p>
-        </div>
+        ))}
       </motion.div>
     </div>
   );

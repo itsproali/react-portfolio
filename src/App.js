@@ -17,9 +17,8 @@ const Loader = React.lazy(() => import("./pages/shared/Loader"));
 function App() {
   const location = useLocation();
   const isFalse = location.pathname.includes("404");
-  console.log(isFalse);
   return (
-    <div>
+    <>
       <ScrollToTop />
       {isFalse || <Navbar />}
       <Suspense fallback={<Loader />}>
@@ -36,7 +35,7 @@ function App() {
         </Routes>
       </Suspense>
       {isFalse || <Footer />}
-    </div>
+    </>
   );
 }
 
