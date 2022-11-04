@@ -23,7 +23,7 @@ const Banner = () => {
       <motion.div
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
       >
         <h2 className="text-neutral text-xl font-medium">Hello, I'm</h2>
         <h1 className="text-4xl font-semibold mb-0">Mohammad Ali</h1>
@@ -36,7 +36,7 @@ const Banner = () => {
               2000,
               "A React JS Developer",
               2000,
-              "A Jr. Web Developer",
+              "A Mern-stack Developer",
               2000,
             ]}
             wrapper="div"
@@ -44,7 +44,7 @@ const Banner = () => {
           />
         </div>
         <p className="text-neutral max-w-md mb-6 font-medium">
-          I am Jr. Front-end Developer. I am very passionate to my work and
+          I am a Front-end Developer. I am very passionate to my work and
           dedicated to explore New Tools And Technologies.
         </p>
 
@@ -74,7 +74,7 @@ const Banner = () => {
         className="w-full md:w-1/2"
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
       >
         <Lottie options={defaultOptions} height="90%" width="90%" />
       </motion.div>

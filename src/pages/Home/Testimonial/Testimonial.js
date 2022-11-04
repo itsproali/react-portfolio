@@ -52,7 +52,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="parent py-20">
+    <div className="parent py-12">
       <motion.div
         className="mb-8"
         initial="hidden"

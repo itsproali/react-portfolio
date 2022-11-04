@@ -11,7 +11,7 @@ import { FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="parent py-16">
+    <div className="parent pt-16 my-16">
       <div className="">
         <motion.div
           className="mb-12"
@@ -34,7 +34,7 @@ const About = () => {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, delay: 2 },
+              transition: { duration: 1, delay: 1.25 },
             }}
           >
             <img
@@ -49,7 +49,7 @@ const About = () => {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, delay: 2 },
+              transition: { duration: 1, delay: 1.25 },
             }}
           >
             <h1 className="text-4xl font-semibold mb-0">Mohammad Ali</h1>
@@ -62,7 +62,7 @@ const About = () => {
                   2000,
                   "A React JS Developer",
                   2000,
-                  "A Jr. Web Developer",
+                  "A Mern-stack Developer",
                   2000,
                 ]}
                 wrapper="div"

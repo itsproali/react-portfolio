@@ -38,7 +38,8 @@ const Project = () => {
   };
 
   return (
-    <div className="parent py-20">
+    <div className={`${location.pathname !== "/" && "pt-16"}`}>
+    <div className="parent py-12">
       <motion.div
         initial="hidden"
         animate={viewDiv && "visible"}
@@ -159,6 +160,7 @@ const Project = () => {
           </Link>
         </div>
       )}
+    </div>
     </div>
   );
 };

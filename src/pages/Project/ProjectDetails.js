@@ -5,6 +5,8 @@ import Items from "../../assets/Items";
 import PrimaryBtn from "../../components/PrimaryBtn";
 import SecondaryBtn from "../../components/SecondaryBtn";
 import { FaLink, FaCode } from "react-icons/fa";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import placeholderImage from "../../assets/placeholder.jpg";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -41,13 +43,18 @@ const ProjectDetails = () => {
         {item?.img?.map((image, index) => (
           <div key={index} className="mt-6">
             <div
-              className="mx-4 rounded-lg shadow-xl single-blog cursor-pointer border-2 border-primary flex flex-col justify-between"
+              className="mx-1 md:mx-4 rounded-lg shadow-xl single-blog cursor-pointer border-2 border-primary flex flex-col justify-between"
               style={{ backgroundColor: "#313131" }}
             >
-              <img
+              {/* <img
                 src={image}
                 alt={item?.title}
-                className="inline-block w-full h-72 rounded-lg"
+                className="inline-block w-full h-64 md:h-72 rounded-lg"
+              /> */}
+              <LazyLoadImage
+                placeholderSrc={placeholderImage}
+                src={image}
+                className="project_image"
               />
             </div>
           </div>
