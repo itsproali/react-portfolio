@@ -215,16 +215,4 @@
         transform: rotate(480deg);
     }
 }
-
-p {
-    font-family: roboto, sans-serif;
-    color: #eee;
-    position: absolute;
-    top: 175px;
-    font-size: 1.5em;
-    letter-spacing: 0.15em;
-    font-weight: 100;
-    filter: drop-shadow(2px 2px 15px #ffffff70);
-}
-
 /* End::Loader 02 */
