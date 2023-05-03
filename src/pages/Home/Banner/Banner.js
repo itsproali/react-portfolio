@@ -32,20 +32,25 @@ const Banner = () => {
             className="text-2xl text-primary font-bold"
             cursor={true}
             sequence={[
-              "A Front-end Developer",
-              2000,
-              "A React JS Developer",
-              2000,
               "A Mern-stack Developer",
+              2000,
+              "A Full-stack Developer",
+              2000,
+              "A Front-end Developer",
               2000,
             ]}
             wrapper="div"
             repeat={Infinity}
           />
         </div>
-        <p className="text-neutral max-w-md mb-6 font-medium">
-          I am a Front-end Developer. I am very passionate to my work and
-          dedicated to explore New Tools And Technologies.
+        <p className="text-neutral max-w-xl mb-6 font-medium">
+          As a MERN stack developer, I am committed to building high-quality web
+          applications that meet the needs of my clients. With years of
+          experience in full-stack web development, I specialize in using
+          React.js, Next js, Typescript, MongoDB, Express.js, and Node.js to
+          create scalable and robust web applications.
+          {/* I am a Front-end Developer. I am very passionate to my work and
+          dedicated to explore New Tools And Technologies. */}
         </p>
 
         <div className="flex items-center">

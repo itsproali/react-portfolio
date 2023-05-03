@@ -8,6 +8,7 @@ import BottomLine from "../../components/BottomLine";
 import MySkill from "./MySkill";
 import Education from "./Education";
 import { FaDownload } from "react-icons/fa";
+import img from "../../assets/mohammad_ali_mern_stack_developer.png";
 
 const About = () => {
   return (
@@ -37,11 +38,7 @@ const About = () => {
               transition: { duration: 1, delay: 1.25 },
             }}
           >
-            <img
-              src="https://i.ibb.co/c6rZ6wN/bg-shape.png"
-              alt="Mohammad Ali"
-              className="mx-auto"
-            />
+            <img src={img} alt="Mohammad Ali" className="mx-auto" />
           </motion.div>
           <motion.div
             className=""
@@ -58,11 +55,11 @@ const About = () => {
                 className="text-2xl text-primary font-bold"
                 cursor={true}
                 sequence={[
-                  "A Front-end Developer",
-                  2000,
-                  "A React JS Developer",
-                  2000,
                   "A Mern-stack Developer",
+                  2000,
+                  "A Full-stack Developer",
+                  2000,
+                  "A Front-end Developer",
                   2000,
                 ]}
                 wrapper="div"
@@ -70,15 +67,23 @@ const About = () => {
               />
             </div>
             <p className="text-neutral font-medium">
-              Dedicated Front-end developer. Capable to solve working problems.
+              As a MERN stack developer, I am committed to building high-quality
+              web applications that meet the needs of my clients. With years of
+              experience in full-stack web development, I specialize in using
+              React.js, Next js, Typescript, MongoDB, Express.js, and Node.js to
+              create scalable and robust web applications.
+              {/* Dedicated Front-end developer. Capable to solve working problems.
               Passionate about learning & development to reach the target. Eager
               to tackle more complex problems and continue to find ways to
-              maximize user efficiency.
+              maximize user efficiency. */}
             </p>
             <br />
             <p className="text-neutral font-medium">
-              My next mission is how to become a Mern stack Developer. I would
-              love to build some Giant Website which will shine myself.
+              My passion for solving complex problems and creating innovative
+              solutions drives me to stay up-to-date with the latest
+              technologies and trends in the industry.
+              {/* My next mission is how to become a Mern stack Developer. I would
+              love to build some Giant Website which will shine myself. */}
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4 mt-4">
               <h2 className="font-medium">

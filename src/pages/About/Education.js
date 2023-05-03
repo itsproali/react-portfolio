@@ -37,7 +37,7 @@ const Education = () => {
               <p className="text-sm text-neutral font-semibold">2020 - 2024</p>
             </div>
             <p className="text-sm text-neutral text-justify">
-              Currently I am studying in Computer Technology (4th Semester) at
+              Currently I am studying in Computer Technology (5th Semester) at
               Dhaka Polytechnic Institute.
             </p>
           </div>
